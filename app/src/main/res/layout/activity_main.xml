@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:orientation="vertical"
 	android:paddingBottom="@dimen/activity_vertical_margin"
 	android:paddingLeft="@dimen/activity_horizontal_margin"
 	android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,7 +12,33 @@
 	tools:context="brianbridge.gmail.com.branchmetricsintegration.MainActivity">
 
 	<TextView
+		android:id="@+id/textView_generatedDeepLink"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="Click the below button to generate a new deep link"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/button_generatedDeepLink"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Generate New Deep Link"/>
+
+		<Button
+			android:id="@+id/button_copyLink"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Copy URL"/>
+	</LinearLayout>
+
+	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Hello World!"/>
-</RelativeLayout>
+</LinearLayout>
